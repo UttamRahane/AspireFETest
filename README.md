@@ -1,4 +1,4 @@
-# Quasar App (aspire-fe-test)
+# AspireFETest
 
 assignment from aspire
 
