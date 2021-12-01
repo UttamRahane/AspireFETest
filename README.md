@@ -4,6 +4,7 @@ assignment from aspire
 
 # requirements
 Node version ~12.22.2
+
 NPM version >7.21.0
 
 ## Install the dependencies
