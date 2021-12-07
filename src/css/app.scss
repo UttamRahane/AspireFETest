@@ -6,6 +6,9 @@ body{
 .font-9 {
     font-size: 0.5625rem;
 }
+.font-13 {
+    font-size: 0.8125rem;
+}
 .font-14 {
     font-size: 0.875rem;
 }
@@ -33,6 +36,12 @@ body{
 .w-50 {
     width: 50%;
 }
+.fill-green{
+    fill: $aspire-green;
+}
+.fill-white {
+    fill: $white;
+}
 
 @media only screen and (max-width: 1023px) {
     .page-padding {
@@ -42,7 +51,7 @@ body{
         background: $aspire-blue;
     }
     .text-color {
-        color: $white;
+        color: $white !important;
     }
 }
 
@@ -53,8 +62,9 @@ body{
     }
     .page-padding {
         padding: 60px;
+        max-width: 1280px;
     }
     .text-color {
-        color: $dark;
+        color: $dark !important;
     }
 }

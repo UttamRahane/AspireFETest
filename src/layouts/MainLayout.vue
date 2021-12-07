@@ -5,10 +5,7 @@
       bordered
       class="shadow-up-1"
     >
-    <q-icon class="logo-with-name mobile-hide" name="svguse:sprite.svg#logo-with-name"/>
-    <div class="company-info font-15 mobile-hide">
-      Trusted way of banking for 3,000+ SMEs and startups in Singapore
-    </div>
+      <branding :hide-branding-on-mobile-screen="true"/>
       <q-list class=" menu-item">
         <menu-component
           v-for="menu in MenuOptions"
@@ -29,6 +26,7 @@
 
 <script lang="ts">
 import MenuComponent from 'components/Menu/MenuComponent.vue'
+import Branding from 'components/Company/Branding.vue'
 
 const linksList = [
   {
@@ -65,6 +63,7 @@ export default defineComponent({
 
   components: {
     MenuComponent,
+    Branding,
   },
 
   data() {
@@ -123,16 +122,6 @@ export default defineComponent({
     }
   } 
 }
-  .company-info{
-    color:#ffffff;
-    opacity: 40%;
-    padding: 0 16px 48px 48px;
-  }
-  .logo-with-name {
-    width: 136px !important;
-    height: 136px !important;
-    padding-left: 48px;
-  }
   .menu-item{
     display: flex;
     flex-direction: column;
