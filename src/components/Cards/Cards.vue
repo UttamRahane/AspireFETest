@@ -1,6 +1,6 @@
 <template>
-  <q-page>
-    <div class="page-padding page-bg column h-100">
+  <q-page class="row full-width">
+    <div class="page-padding page-bg column full-width full-height no-wrap">
       <div class="font-14 text-color">Available balance</div>
       <div class="amount row items-center q-mb-lg">
         <div class="unit">$$</div>
@@ -18,16 +18,16 @@
           :key="tab.name"
           :name="tab.name" 
           :label="tab.label"
-          class="q-pl-none" />
+          class="q-pl-none text-color" />
         </q-tabs>
-        <q-tab-panels v-model="selectedTab" animated>
+        <q-tab-panels v-model="selectedTab" animated class="full-height">
             <q-tab-panel
               v-for="tab in tabs" 
               :key="tab.name"
               :name="tab.name"
               class="q-py-md q-px-xs"
           >
-          <card-details></card-details>
+          <card />
           </q-tab-panel>
         </q-tab-panels>
     </div>
@@ -36,11 +36,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import CardDetails from './CardDetails.vue';
+import Card from './Card.vue';
 
 export default defineComponent({
   name: 'Cards',
-  components: {  CardDetails },
+  components: {  Card },
   data(){
     return {
       tabs: [{
@@ -52,6 +52,9 @@ export default defineComponent({
       }],
       selectedTab: '',
     }
+  },
+  created(){
+    this.selectedTab = this.tabs[0].name;
   }
 });
 </script>
@@ -62,9 +65,9 @@ export default defineComponent({
     margin-top: 14px;
     .unit{
       padding: 4px 12px;
-      background: #01D167;
+      background: $aspire-green;
       border-radius: 4px;
-      color: #fff;
+      color: $white;
       margin-right: 12px;
       height: 30px;
     }
@@ -75,7 +78,7 @@ export default defineComponent({
       .q-tab--active{
         .q-tab__label{
           font-weight: 600;
-          color: $dark;
+          color: inherit;
         }
       }
       .q-tab__label{
