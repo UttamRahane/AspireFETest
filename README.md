@@ -29,3 +29,6 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+
+### Live Demo
+see [Aspire frontend test].(https://stupefied-visvesvaraya-3c32be.netlify.app/)
